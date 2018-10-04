@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Temperature(celsius){
+        this.celcius = celsius;
+        this.getFahrenheit = function (){
+            return (9 * this.celcius) / 5 + 32;
+        }
+        this.getKenvin = function(){
+            return this.celcius + 273;
+        }
+    }
+    var celcius = new Temperature(parseFloat(prompt("Enter the Celcius:")));
+    if (celcius < -273){
+        alert("Cancled!!!");
+    } else {
+        var fahrenheit = celcius.getFahrenheit();
+        var kenvin = celcius.getKenvin();
+        alert("C --> F : " + fahrenheit + "  C --> K : " + kenvin);
+    }
+
+
+</script>
+</body>
+</html>
